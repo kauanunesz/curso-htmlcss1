@@ -1,0 +1,28 @@
+body {
+    font-size: 28px;
+}
+
+p {
+    color: green; /*Seletor normal*/
+}
+
+div p{
+    font-size: 40px; /*Pega todos os elementos dentro de outro elemento. Todas tags 'p' dentro de divs*/
+}
+
+div>p {
+    background-color: aqua; /*Pega todas as tags seguidas de outra. todas tags 'p' seguida da 'div'*/
+}
+
+div ~ p {
+    color: blue; /*Todas tags que estão no mesmo 'nível' da anterior.Todas tags 'p' no mesmo nível de uma div*/
+}
+
+div + p {
+    background-color: silver; /*Seleciona uma única tag, vindo em seguida da outra. p seguida da div*/
+}
+
+p::first-letter {
+    font-size: 150%;
+    color: cornflowerblue; /*:: ativa pseudo-elementos das páginas*/
+}
