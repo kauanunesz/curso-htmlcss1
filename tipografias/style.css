@@ -1,0 +1,22 @@
+body {
+    font-style: italic; /*Estilos das fontes*/
+    font-family: Arial, Helvetica, sans-serif; /*Tipos de fonte. Uma lista*/
+    text-decoration: normal; /*Estilos adicionais*/
+    font-weight: bold; /*Negrito, ou o 'peso' da fonte*/
+    text-align: left; /*Centraliza o texto*/
+}
+body > h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.5em;
+    text-transform: normal;
+    text-decoration: normal;
+
+    text-shadow: 4px 4px 2 green;
+}
+
+p{
+    text-indent: 70px; /*Adiciona margem ao texto/parágrafo*/
+    text-transform: capitalize; /*Transforma algumas propriedades do texto*/
+    line-height: 1.5; /*Distanciamento linha*/
+}
