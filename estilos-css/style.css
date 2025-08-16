@@ -2,27 +2,63 @@ body {
     font-size: 28px;
 }
 
+.aviso.destaque{ /*Pega itens que tem obrigatoriamente duas ou mais classes, que você mesmo selecionar*/
+    color: blueviolet;
+}
+
+li.destaque{ /*Pega todos os itens que são de determinada classe*/
+    color: darkgreen;
+}
+
 p {
-    color: green; /*Seletor normal*/
+    color: black; /*Seletor normal*/
 }
 
-div p{
-    font-size: 40px; /*Pega todos os elementos dentro de outro elemento. Todas tags 'p' dentro de divs*/
+div p { /*X Y: seleciona itens de Y que são descendentes de X.*/
+    border: 1px solid blue;
 }
 
-div>p {
-    background-color: aqua; /*Pega todas as tags seguidas de outra. todas tags 'p' seguida da 'div'*/
+div > p { /*X > Y seleciona itens de Y que são filhos de X.*/
+    color: green;
 }
 
-div ~ p {
-    color: blue; /*Todas tags que estão no mesmo 'nível' da anterior.Todas tags 'p' no mesmo nível de uma div*/
+div ~ p { /*X ~ Y seleciona itens de Y que são irmãos de X.*/
+    text-transform: uppercase;
 }
 
-div + p {
-    background-color: silver; /*Seleciona uma única tag, vindo em seguida da outra. p seguida da div*/
+div + p { /*X + Y seleciona itens de Y que são irmãos de X, e estão posicionados logo após X.*/
+    background: #ccc;
 }
 
 p::first-letter {
     font-size: 150%;
     color: cornflowerblue; /*:: ativa pseudo-elementos das páginas*/
 }
+
+/*Algumas pseudo-classes:
+
+:hover seleciona elementos cujo ponteiro do mouse está posicionado sobre.
+:first-child seleciona somente o primeiro elemento que atende ao seletor.
+:last-child seleciona somente o último elemento que atende ao seletor.
+:nth-child seleciona o n-ésimo elemento que atende ao seletor (ex. :nth-child(5) para o 5º).
+:nth-last-child faz o mesmo que :nth-child, mas do último ao primeiro.
+:only-child seleciona elementos que são filhos únicos.
+:not(seletor) seleciona elementos que não atendem ao seletor.
+Pseudo-elementos são facilitadores que permitem selecionar elementos que não existem independentemente, como por exemplo a primeira letra de um parágrafo.
+
+::first-letter seleciona a primeira letra de um elemento de texto.
+::first-line seleciona a primeira linha de um elemento de texto.
+::selection seleciona o texto selecionado pelo usuário.
+::after cria um elemento depois do elemento selecionado que pode ser preenchido com conteúdo textual usando a propriedade content.
+::before cria um elemento antes do elemento selecionado que pode ser preenchido com conteúdo textual usando a propriedade content.
+
+Forms
+Estilizar formulários é uma das mais desafiadoras tarefas para o designer. O CSS dispões de algumas pseudo-classes e alguns pseudo-elementos que ajudam nessa tarefa.
+
+:focus seleciona somente campos que estão com o foco do usuário.
+:checked seleciona somente elementos marcados com ✔.
+:disabled e :enabled selecionam elementos desabilitados ou habilitados.
+:read-only e :read-write selecionam elementos somente-para-leitura ou não.
+:required e :optional selecionam elementos obrigatórios e opcionais.
+:invalid e :valid selecionam elementos com valores inválidos e válidos.
+::placeholder seleciona o placeholder de um elemento.*/
