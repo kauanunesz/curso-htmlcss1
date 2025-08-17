@@ -25,4 +25,5 @@ transform: translate(-50%, -50%);
     margin: 50px; 
     box-sizing: border-box;
     width: 200px;
+    box-shadow: 10px 10px 20px 1px black; /*deslocamento horizontal, vertical, desfoque, expansão e cor*/
 }
