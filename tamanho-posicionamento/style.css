@@ -1,0 +1,41 @@
+/* Elementos em bloco preenchem 100% da largura por padrão e a altura vai se ajustando automaticamente. Já elementos inline se mantém dentro de um bloco, mantendo o fluxo normal */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 20px;
+}
+.container{
+    
+}
+span{
+    /* text-decoration: underline;
+    background-color: #fff; */
+    /* Texto do span (divisão inline)  */
+}
+
+p.exemplo{
+    background-color: rgb(133, 0, 0);
+    margin-left: 200px;
+    max-width: 300px; /* Elementos em bloco, faz mais sentido definir uma largura máxima para ele ocupar */
+    max-height: 130px; /*Aqui houve um vazamento de texto, pois a altura máxima do bloco é menor que o espaço necessário para o texto de adaptar*/
+    overflow: hidden; /* Overflow = vazamento. A propriedade Hidden apaga o que está /sendo vazada. Temos também a propriedade scroll */
+    margin-bottom: 50px;
+}
+.destaque {
+    margin-top: 50px;
+    background-color: silver;
+    max-width: 500px;
+    float: left; /*Significa flutuante, essa propriedade permite dizer que o elemento está flutuando à 'esquerda' da página, permitindo que outros elementos circundem ele*/
+
+    /* Dica do ermogenes: Não use float para fazer layout do site */
+}
+
+p{
+    margin-top: 50px;
+    background-color: powderblue;
+}
