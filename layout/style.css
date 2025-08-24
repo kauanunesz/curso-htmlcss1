@@ -1,0 +1,62 @@
+body{
+    font-size: 1.4em;
+}
+
+div{
+    background-color: #c4c4c4;
+    border: 1px solid #666;
+}
+
+#container{
+    display: flex;/* Deixa os itens dentro do container flexíveis. Dita comportamento dos itens dentro do container */
+    flex-flow: row; /* Padrão, deixa os itens do container como 'linhas'. Um do lado do outro */
+    flex-flow: row wrap;  /* Wrap faz com que, caso o conteúdo exceda o tamanho limite de largura, por linha, o elemento 'quebre'*/
+    justify-content: center;/* Justificar conteúdo flex/flexível. Temos diversas propriedades que manipulam o posicionamento em um container flex.*/
+    
+    /* A propriedade justify content tem seu comportamento ditado de acordo com o estilo flex-flow. Se estiver em row por padrão, ou seja, um do lado do outro, justify-content manipulará o eixo principal, neste caso sendo horizontal. Idem para column*/
+    height: 100px;
+    align-items: center;
+    /* Align-items funciona no eixo transversal, eixo contrário de justify-content.  */ 
+}
+
+#container2{
+    display: flex;
+    margin-top: 20px;
+    flex-flow: column; /* Deixa os itens do container como colunas. Um embaixo do outro */
+    align-items: center;
+}
+
+#container3{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    height: 150px;
+}
+/* Preciso ver a diferença de propriedades justify/align, e items/content */
+
+#container4{
+    margin-top: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#container5{
+    margin-top: 20px;
+    height: 80px;
+    display: flex;
+}
+
+#especial{
+    background-color: #666;
+    align-self: flex-start; /* align/justify-self servem para alinharem o próprio elemento dentro de um container */
+}
+#container5 .item {
+    flex: 1; /* Tratamento dos próprios elementos na classe que sobram. Se tiver 3 elementos, e por flex 1 em cada, terão 3 espaços flex no total. O navegador dividirá o espaço total em 3, e dividirá conforme a quantidade de flex em cada elemento */
+}
+
+.item#especial2{
+    flex: 2;
+}
